@@ -19,6 +19,38 @@ const looping = (x) => {
 
 looping(50);
 ```
+
+## CODE REVIEW
+```javascript
+// Fungsi untuk melakukan looping dari 1 sampai x dengan peraturan khusus
+const looping = (x) => {
+  // Looping dari 1 sampai x
+  for (let i = 1; i <= x; i++) {
+    // Cek apakah i bisa dibagi dengan 3 dan 5
+    if (i % 3 == 0 && i % 5 == 0) {
+      // Jika ya, print "TigaLima"
+      console.log("TigaLima");
+    }
+    // Cek apakah i bisa dibagi dengan 3 saja
+    else if (i % 3 == 0) {
+      // Jika ya, print "Tiga"
+      console.log("Tiga");
+    }
+    // Cek apakah i bisa dibagi dengan 5 saja
+    else if (i % 5 == 0) {
+      // Jika ya, print "Lima"
+      console.log("Lima");
+    }
+    // Jika tidak bisa dibagi dengan 3 atau 5, print i
+    else {
+      console.log(i);
+    }
+  }
+}
+
+//jalankan fungsi looping dengan value 50
+looping(50);
+```
 ## HASILNYA
 ```powershell
 $ node Test-Hwg.js
